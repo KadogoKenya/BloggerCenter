@@ -11,4 +11,4 @@ def index():
 
      title = 'Home - Welcome to The best Online blog center'
 
-    return render_template('index.html')
+    return render_template('index.html', title = title)
