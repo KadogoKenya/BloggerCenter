@@ -8,6 +8,14 @@
         <title> Welcome to the best Movie Review website </title>
         {% endif %}
     </head>
+
+     <!-- Popular movie section  -->
+     <h3> Quotes</h3>
+     <ul>
+        {% for quotes in quote %}
+            <li>{{ quotes }}</li>
+        {% endfor %}
+    </ul>
     <body>
 
     </body>
