@@ -31,9 +31,6 @@ def new_post():
         return redirect(url_for('main.index'))
     return render_template('blogpost.html', title= 'new Blogpost', form=form, legend='Update blog')
 
-
-
-
 @main.route("/post/<int:post_id>")
 def blog(post_id):
     # form= BlogpostForm()
@@ -71,10 +68,6 @@ def delete_blog(blog_id):
     db.session.commit()
     flash('Your blog has been deleted!', 'success')
     return redirect(url_for('main.index'))
-
-
-
-
 
 @main.route('/new/comment/<int:post_id>',methods=['GET','POST'])
 @login_required
