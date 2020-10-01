@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+<!-- {% import 'bootstrap/wtf.html' as wtf %} -->
 {% block content%}
 
 
@@ -11,7 +11,6 @@
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">{{ legend }}</legend>
 
-<!-- .................new post form title.......................... -->
 
             <div class="form-group">
                 {{ form.title.label(class="form-control-label")}}
@@ -26,8 +25,6 @@
                 {{ form.title(class="form-control form-control-lg")}}
                 {% endif %}
             </div>
-
-            <!-- .............................new post content............... -->
 
             <div class="form-group">
                 {{ form.content.label(class="form-control-label")}}
@@ -44,14 +41,8 @@
             </div>
 
         </fieldset>
-
-       
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info")}}
         </div>
-
     </form>
-
-
-
     {% endblock %}
