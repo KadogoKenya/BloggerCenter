@@ -5,6 +5,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from ..models import User
 from .forms import SignupForm, LoginForm
 from flask_login import login_user,current_user,login_required,logout_user
+from ..email import mail_message
+
 
 
 @auth.route("/login", methods=['GET', 'POST'])
@@ -32,7 +34,7 @@ def signup():
         return redirect(url_for('main.index'))
     
     if signup_form.validate_on_submit():
-        user = User(username=form.username.data, email=signup_form.email.data, password=signup_form.password.data)
+        user = User(username=signup_form.username.data, email=signup_form.email.data, password=signup_form.password.data)
         db.session.add(user)
         db.session.commit()
 
@@ -54,6 +56,16 @@ def signup():
 def logout():
     logout_user()
     return redirect(url_for('main.index'))
+
+# @auth.route('/signup', methods = ["GET","POST"])
+# def signup():
+#     form = SignupForm()
+#     if form.validate_on_submit():
+#         user = User(email = form.email.data, username = form.username.data, password = form.password.data)
+#         user.save_u()
+#         mail_message("Welcome to blogcenter","email/welcome_user",user.email,user=current_user)
+#         return redirect(url_for('auth.login'))
+#     return render_template('auth/signup.html', r_form = form)
 
 
 # @main.route('/update/pic',methods= ['POST'])

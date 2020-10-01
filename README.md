@@ -1,12 +1,11 @@
 # BloggerCenter
-## User Stories
+## User upcoming Stories
 1. A user can view the blog posts and random quotes displayed on the site.
 2. A user can sign up then log in into BloggerCenter.
-3. A user, can write a comment on the blog posts.
-4. A user can create a blog from the application.
-5. A user can sign in to blogCenter.
-6. A writer can delete comments written by users.
-7. A Writer can update or delete blogs they have created.
+3. A user can create a blog from the application.
+4. A user can sign in to blogCenter.
+5. A writer can delete comments written by users.
+6. A Writer can update or delete blogs they have created.
 
 ## SetUp/Installations
 Prerequisites: The following command installs all the application requirements pip freeze -r requirements.txt
