@@ -21,7 +21,7 @@ def index():
 def new_post():
     form = BlogpostForm()
     if form.validate_on_submit():
-        blog = Blog(title=form.title.data, content=form.content.data) 
+        blog = blogposts(title=form.title.data, content=form.content.data) 
         db.session.add(blog)
         db.session.commit()
         flash('Your blog has been created!', 'success')

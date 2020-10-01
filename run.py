@@ -1,5 +1,5 @@
-# from app import app
-# from flask import Flask
+from app import app
+from flask import Flask
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run()
